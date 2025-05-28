@@ -1,0 +1,145 @@
+body {
+    background-color: rgb(252, 241, 247);
+    background-image: url('bg-top.svg'), url('bg-bottom.svg');
+    background-position: bottom left, top right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+}
+
+#naslov {
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+#izbor {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: large;
+}
+
+.switch {
+  width: 50px;
+  height: 25px;
+  background-color: hsl(237, 63%, 64%);
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  margin-top: 0;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  top: 3.5px;
+  left: 4px;
+  transition: transform 0.3s ease;
+}
+
+#billingToggle:checked + .switch::before {
+  transform: translateX(25px);
+}
+
+.naslov2, #naslov3 {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.kolone {
+    margin: 70px;
+    margin-top: 30px;
+}
+
+.kolone, .kol1, .kol2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.kol1, .kol2 {
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+.kol1 {
+    background-color: white;
+    color: grey;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.kol2 {
+    background-color: hsl(237, 63%, 64%);
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    color: white;
+    background-color: hsl(237, 63%, 64%);
+    border-radius: 10%;
+    width: 70%;
+    border: none;
+    padding: 5px;
+    margin-top: 15px;
+    position: relative;
+    margin: auto;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+    border: solid hsl(237, 63%, 64%);
+}
+
+#btn2 {
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+    margin-top: 15px;
+}
+
+#btn2:hover {
+    background-color: hsl(237, 63%, 64%);
+    color: white;
+    border: solid white;
+}
+
+.cifraM, #cifraM {
+    display: none;
+}
+
+.cifraA, #cifraA, .cifraM, #cifraM {
+    font-size: 70px;
+    padding: 5px;
+}
+
+hr {
+    width: 70%;
+}
+
+@media screen and (max-width: 750px) {
+    .kolone {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .kol1, .kol2 {
+        width: 80vw;
+    }
+}
